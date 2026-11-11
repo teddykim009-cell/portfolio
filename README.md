@@ -8,7 +8,7 @@ Sticker prices are not what families pay. This tool takes each college's yearly 
 - the monthly payment and total interest after graduation,
 - the salary you would need to keep payments under a share of your income you choose.
 
-**Live demo:** `https://<your-username>.github.io/<repo-name>/` (see "Deploy" below)
+**Live demo:** `(https://teddykim009-cell.github.io/portfolio/)` (see "Deploy" below)
 
 ## Why I built it
 
