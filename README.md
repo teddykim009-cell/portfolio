@@ -12,7 +12,7 @@ Sticker prices are not what families pay. This tool takes each college's yearly 
 
 ## Why I built it
 
-I'm a high school senior comparing colleges, and I kept ending up with spreadsheets that stopped at "tuition minus aid." The number that actually matters is what you still owe ten years later. This project turns that into something I can change one assumption at a time and watch.
+I'm a high school senior comparing colleges, and I kept ending up with spreadsheets that stopped at "tuition minus aid." The number that actually matters is what you still owe ten years later. 
 
 ## How it works
 
