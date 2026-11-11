@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Net Price Planner</title>
+  <meta name="description" content="Compare what each college really costs after aid, then see what the loans look like.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Net Price Planner</h1>
+    <p>Sticker prices are not what you pay. Enter each college's cost and aid, add the scholarships you're chasing, and see how much you would borrow and what the monthly payment looks like.</p>
+  </header>
+
+  <p class="notice" id="notice" hidden>
+    These are example numbers. Replace them with the figures from each school's own net price calculator.
+  </p>
+
+  <main class="layout">
+    <div class="inputs">
+      <section aria-labelledby="h-assume">
+        <h2 id="h-assume">Your assumptions</h2>
+        <div id="settings" class="settings"></div>
+      </section>
+
+      <section aria-labelledby="h-schools">
+        <h2 id="h-schools">Colleges</h2>
+        <div class="scroll">
+          <table id="schools">
+            <thead><tr>
+              <th scope="col">Name</th>
+              <th scope="col">Yearly cost</th>
+              <th scope="col">Yearly grants</th>
+              <th scope="col">Cost rises</th>
+              <th scope="col"><span class="sr">Remove</span></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-school">Add a college</button>
+      </section>
+
+      <section aria-labelledby="h-schol">
+        <h2 id="h-schol">Scholarships</h2>
+        <p class="hint">Chance is your honest odds of winning. A 30% chance of $2,500 counts as $750.</p>
+        <div class="scroll">
+          <table id="scholarships">
+            <thead><tr>
+              <th scope="col">Name</th>
+              <th scope="col">Amount per year</th>
+              <th scope="col">Years</th>
+              <th scope="col">Chance</th>
+              <th scope="col">Applies to</th>
+              <th scope="col">Deadline</th>
+              <th scope="col"><span class="sr">Remove</span></th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-schol">Add a scholarship</button>
+      </section>
+
+      <p><button type="button" id="reset" class="quiet">Reset to example data</button></p>
+    </div>
+
+    <section class="results" aria-labelledby="h-results" aria-live="polite">
+      <h2 id="h-results">What each college costs you</h2>
+      <ul id="legend" class="legend"></ul>
+      <div id="bars"></div>
+      <div class="scroll"><table id="detail" class="detail"></table></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>An estimate for planning, not financial advice. Loan terms are simplified; the README in this repository lists every assumption. Your data stays in this browser and is never sent anywhere.</p>
+  </footer>
+
+  <script src="finance.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

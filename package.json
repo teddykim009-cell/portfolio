@@ -1,0 +1,7 @@
+{
+  "name": "net-price-planner",
+  "version": "1.0.0",
+  "description": "Compare what each college really costs after aid, then see what the loans look like.",
+  "scripts": { "test": "node --test test/finance.test.js" },
+  "license": "MIT"
+}
